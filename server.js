@@ -7,6 +7,7 @@
  const initializeSocket = require('./src/config/socket');
  const authRoutes = require('./src/routes/authRoutes');
  const chatRoutes = require('./src/routes/chatRoutes');
+ const userRoutes = require('./src/routes/userRoutes');
  
  const app = express();
  const server = http.createServer(app);
@@ -18,6 +19,7 @@
  // Routes
  app.use('/api/auth', authRoutes);
  app.use('/api/chat', chatRoutes);
+ app.use('/api/user', userRoutes);
  
  
  // Connect to MongoDB
@@ -25,6 +27,7 @@
  
  // Initialize Socket.io
  initializeSocket(server);
+ 
  
  // Start server
  const PORT = process.env.PORT || 5500;
