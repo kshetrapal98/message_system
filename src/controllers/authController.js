@@ -10,7 +10,7 @@ exports.signup = async (req, res) => {
   const { username, email, password, confirmPassword } = req.body;
 
   try {
-    // Check if passwords match
+     
     if (password !== confirmPassword) {
       return res.status(400).json({ error: 'Passwords do not match' });
     }
@@ -37,7 +37,7 @@ exports.signup = async (req, res) => {
 // LOGIN
 exports.login = async (req, res) => {
   const { email, password } = req.body;
-  console.log(req.body);
+  
   
 
   try {
