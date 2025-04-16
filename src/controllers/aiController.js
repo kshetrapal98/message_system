@@ -4,7 +4,7 @@ const responses = [
     "I'm here to help!",
   ];
   
-  exports.generateAIResponse = () => {
+  exports.generateAIResponse = (userMessage) => {
     const randomIndex = Math.floor(Math.random() * responses.length);
     return responses[randomIndex];
   };
